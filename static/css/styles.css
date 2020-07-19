@@ -1,0 +1,21 @@
+header{
+	background: #165df4;#12345a;
+	border-bottom: #a63cff 3px solid;
+	height:120px;
+	width:100%;
+	padding-top:30px;
+
+}
+
+header h1{
+	text-align:center;
+	color: #ffffff;
+
+}
+
+body{
+	font:15px/1.5 Arial, Helvetica,sans-serif;
+	padding: 0px;
+	background-color: #7cf4c8;
+}
+

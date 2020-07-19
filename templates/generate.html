@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>PoetryGenerator</title>
+	<link rel="icon" href="{{ url_for('static', filename='index.ico') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<h1 align="center">Poetry Generator</h1>
+		
+		</div>
+	</header>
+
+
+	<div align="center">
+		<form method="POST">
+			<p>
+				<input type="radio" name="type" value="1" checked="checked"/>续写诗
+				<br>
+				<input type="radio" name="type" value="2" />藏头诗
+				<br>
+				开始词（续写诗时的第一句或藏头诗藏的句）
+				<br>
+				<textarea name="start_words" row="4" col="20"></textarea>
+				<br>
+				生成诗的意境（不是诗的组成部分，可以为空）
+				<br>
+				<textarea name="prefix_words" row="4" col="20"></textarea>
+				<br>
+				<input type="submit" name="submit" value="generate">
+
+			</p>
+		</form>
+	</div>
+
+	<div align="center">
+
+		{% for c in poetry %}
+			{{c}}
+			{%if c == '？' or c == '。' or c == '！'%}
+				<br>
+			{%endif%}
+		{% endfor %}
+
+	</div>
+	
+
+</body>
+
+
+</html>
